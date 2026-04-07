@@ -19,32 +19,28 @@
 
     <section style="padding:3rem 0;background:var(--white)">
       <div class="container-sm">
-        <form class="apply-form">
+        <form id="upload-form" class="apply-form">
           <label>Upload photos
-            <input type="file" multiple accept="image/*" />
+            <input id="upload-files" type="file" multiple accept="image/*" />
           </label>
           <fieldset class="upload-tags-fieldset">
             <legend>Apply tags</legend>
-            <label><input type="checkbox" /> Janitorial Services</label>
-            <label><input type="checkbox" /> Daily Building Cleaning</label>
-            <label><input type="checkbox" /> School Cleaning</label>
-            <label><input type="checkbox" /> Hard Surface Floor Care</label>
-            <label><input type="checkbox" /> Carpet Cleaning</label>
-            <label><input type="checkbox" /> Warehouse Cleaning</label>
-            <label><input type="checkbox" /> Facility Maintenance</label>
-            <label><input type="checkbox" /> Day Porter</label>
-            <label><input type="checkbox" /> Event Setup &amp; Breakdown</label>
-            <label><input type="checkbox" /> Project Work</label>
+            <div id="upload-tag-list"></div>
           </fieldset>
           <div class="upload-actions-row">
-            <button type="button" class="btn btn-primary">Apply All Tags</button>
-            <button type="button" class="btn btn-secondary">Delete Photo</button>
+            <button id="apply-all-tags-btn" type="button" class="btn btn-primary">Apply All Tags</button>
+            <button id="delete-photo-btn" type="button" class="btn btn-secondary">Delete Photo</button>
           </div>
+          <button type="submit" class="btn btn-primary">Upload Selected Files</button>
         </form>
-        <p style="margin-top:1rem;color:var(--gray-600)">This page is scaffolded for the workflow you requested. Uploading, tagging persistence, and delete actions still need a backend/storage layer to actually save changes.</p>
+
+        <p id="upload-status" style="margin-top:1rem;color:var(--gray-600)">This page is now wired to a front-end data layer. Real upload/save/delete persistence is the next backend step.</p>
+
+        <div id="upload-photo-list" class="upload-photo-list" style="margin-top:1.5rem"></div>
       </div>
     </section>
   </main>
 </div>
+<script src="js/gallery-admin.js"></script>
 </body>
 </html>
