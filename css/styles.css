@@ -1348,19 +1348,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-align: center;
 }
 @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-.stat-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  background: rgba(64,104,223,0.1);
-  border-radius: 9999px;
-  margin-bottom: 1rem;
-}
-.stat-icon svg { width: 2rem; height: 2rem; color: var(--primary); }
-.stat-value { font-size: 1.875rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
-.stat-label { font-size: 0.875rem; color: var(--gray-600); font-weight: 500; }
+/* About stats now reuse trust medal styles */
 
 /* ─── SERVICES PAGE ────────────────────────────────────────── */
 .services-page-hero {
