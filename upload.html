@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload | IServe Facilities</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="site-wrapper">
+  <main class="flex-grow">
+    <section class="services-page-hero">
+      <div class="container text-center">
+        <h1>Photo Upload</h1>
+        <p>Internal gallery upload + multi-tagging workspace.</p>
+      </div>
+    </section>
+
+    <section style="padding:3rem 0;background:var(--white)">
+      <div class="container-sm">
+        <form class="apply-form">
+          <label>Upload photos
+            <input type="file" multiple accept="image/*" />
+          </label>
+          <fieldset class="upload-tags-fieldset">
+            <legend>Apply tags</legend>
+            <label><input type="checkbox" /> Janitorial Services</label>
+            <label><input type="checkbox" /> Daily Building Cleaning</label>
+            <label><input type="checkbox" /> School Cleaning</label>
+            <label><input type="checkbox" /> Hard Surface Floor Care</label>
+            <label><input type="checkbox" /> Carpet Cleaning</label>
+            <label><input type="checkbox" /> Warehouse Cleaning</label>
+            <label><input type="checkbox" /> Facility Maintenance</label>
+            <label><input type="checkbox" /> Day Porter</label>
+            <label><input type="checkbox" /> Event Setup &amp; Breakdown</label>
+            <label><input type="checkbox" /> Project Work</label>
+          </fieldset>
+          <div class="upload-actions-row">
+            <button type="button" class="btn btn-primary">Apply All Tags</button>
+            <button type="button" class="btn btn-secondary">Delete Photo</button>
+          </div>
+        </form>
+        <p style="margin-top:1rem;color:var(--gray-600)">This page is scaffolded for the workflow you requested. Uploading, tagging persistence, and delete actions still need a backend/storage layer to actually save changes.</p>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

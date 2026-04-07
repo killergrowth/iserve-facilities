@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply | IServe Facilities</title>
+  <meta name="description" content="Apply to work with IServe Facilities." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/iServeFacLogoSquareTransp.png" />
+</head>
+<body>
+<div class="site-wrapper">
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" data-nav="home">
+        <img src="images/iServeFacLogoSquareTransp.png" alt="IServe Facilities" />
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="services.html" data-nav="services">Services</a>`r`n    <a href="gallery.html" data-nav="gallery">Gallery</a>`r`n`r`n        <a href="gallery.html" data-nav="gallery">Gallery</a>`r`n<a href="gallery.html" data-nav="gallery">Gallery</a>
+        <div class="nav-dropdown-wrap" id="locations-dropdown-wrap">
+          <button class="nav-link" data-nav="locations" aria-haspopup="true" aria-expanded="false">
+            Locations
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown" id="locations-dropdown">
+            <a href="locations.html">View All Locations</a>
+            <div class="nav-dropdown-divider"></div>
+            <div class="nav-dropdown-label">Cities We Serve</div>
+            <a href="locations/andover.html">Andover</a>
+            <a href="locations/arkansas-city.html">Arkansas City</a>
+            <a href="locations/augusta.html">Augusta</a>
+            <a href="locations/derby.html">Derby</a>
+            <a href="locations/el-dorado.html">El Dorado</a>
+            <a href="locations/newton.html">Newton</a>
+            <a href="locations/wellington.html">Wellington</a>
+            <a href="locations/wichita.html">Wichita</a>
+            <a href="locations/winfield.html">Winfield</a>
+          </div>
+        </div>
+        <a href="contact.html" data-nav="contact">Contact</a>`r`n    <a href="apply.html" data-nav="apply">Apply</a>`r`n`r`n        <a href="apply.html" data-nav="apply">Apply</a>`r`n<a href="apply.html" data-nav="apply">Apply</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">`r`n        <span class="mobile-menu-label">MENU</span>`r`n<span class="mobile-menu-label">MENU</span>
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="about.html" data-nav="about">About</a>
+    <a href="services.html" data-nav="services">Services</a>`r`n    <a href="gallery.html" data-nav="gallery">Gallery</a>`r`n`r`n        <a href="gallery.html" data-nav="gallery">Gallery</a>`r`n<a href="gallery.html" data-nav="gallery">Gallery</a>
+    <button class="mobile-locations-toggle" id="mobile-locations-toggle" data-nav="locations">Locations<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div class="mobile-locations-sub" id="mobile-locations-sub">
+      <a href="locations.html">View All Locations</a>
+      <a href="locations/andover.html">Andover</a>
+      <a href="locations/arkansas-city.html">Arkansas City</a>
+      <a href="locations/augusta.html">Augusta</a>
+      <a href="locations/derby.html">Derby</a>
+      <a href="locations/el-dorado.html">El Dorado</a>
+      <a href="locations/newton.html">Newton</a>
+      <a href="locations/wellington.html">Wellington</a>
+      <a href="locations/wichita.html">Wichita</a>
+      <a href="locations/winfield.html">Winfield</a>
+    </div>
+    <a href="contact.html" data-nav="contact">Contact</a>`r`n    <a href="apply.html" data-nav="apply">Apply</a>`r`n`r`n        <a href="apply.html" data-nav="apply">Apply</a>`r`n<a href="apply.html" data-nav="apply">Apply</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:0.75rem;width:100%;text-align:center">Request a Quote</a>
+  </nav>
+</header>
+
+<main class="flex-grow">
+  <section class="services-page-hero">
+    <div class="container text-center">
+      <h1>Work With Us!</h1>
+      <p>Tell us about yourself and upload your resume to apply.</p>
+    </div>
+  </section>
+
+  <section style="padding:3rem 0;background:var(--white)">
+    <div class="container-sm">
+      <form id="apply-form" class="apply-form">
+        <label>Name*
+          <input type="text" name="name" required />
+        </label>
+        <label>Phone*
+          <input type="tel" name="phone" required />
+        </label>
+        <label>Email*
+          <input type="email" name="email" required />
+        </label>
+        <label>Resume*
+          <input type="file" name="resume" accept=".pdf,.doc,.docx" required />
+        </label>
+        <label>Tell us about yourself*
+          <textarea name="about" required placeholder="Help us get to know you — tell us about your experience, work style, strengths, and anything else you want us to know."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" style="justify-content:center">Submit Application</button>
+      </form>
+
+      <div id="apply-success" class="apply-success-box" style="display:none">
+        <h3>Thank you! We've received your application.</h3>
+        <a href="index.html">Go back to the home page</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

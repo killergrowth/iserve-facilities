@@ -22,9 +22,13 @@
         isActive = true;
       } else if (navPage === 'services' && filename === 'services.html') {
         isActive = true;
+      } else if (navPage === 'gallery' && filename === 'gallery.html') {
+        isActive = true;
       } else if (navPage === 'locations' && (filename === 'locations.html' || path.includes('/locations/'))) {
         isActive = true;
       } else if (navPage === 'contact' && filename === 'contact.html') {
+        isActive = true;
+      } else if (navPage === 'apply' && filename === 'apply.html') {
         isActive = true;
       }
 
@@ -283,6 +287,19 @@
     // CSS handles hover transitions; nothing extra needed
   }
 
+  function initApplyForm() {
+    var form = document.getElementById('apply-form');
+    var successBox = document.getElementById('apply-success');
+    if (!form || !successBox) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      form.style.display = 'none';
+      successBox.style.display = 'block';
+    });
+  }
+
   /* ─── Init ───────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     setActiveNav();
@@ -294,6 +311,7 @@
     initGrimeButtons();
     initContactForm();
     initGallery();
+    initApplyForm();
   });
 
 })();
