@@ -1344,6 +1344,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: 1rem;
   box-shadow: var(--shadow-lg);
 }
+.event-setup-image img {
+  object-fit: contain;
+  object-position: center;
+  background: var(--white);
+}
 
 /* ─── CONTACT PAGE ─────────────────────────────────────────── */
 .contact-hero {
