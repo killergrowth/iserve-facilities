@@ -636,6 +636,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   color: var(--white);
   overflow: hidden;
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.18) 100%);
+  z-index: 1;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -661,6 +668,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 4rem 3rem;
   align-items: center;
   gap: 2rem;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .hero-inner-desktop {
@@ -689,6 +697,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 1.25rem;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
 }
 @media (min-width: 1024px) {
   .hero-h1 { font-size: 3rem; }
@@ -698,9 +707,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .hero-sub {
   font-size: 1.125rem;
-  color: #e5e7eb;
+  color: #f3f4f6;
   margin-bottom: 2rem;
   line-height: 1.625;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
 }
 .hero-btns {
   display: flex;
@@ -713,6 +723,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: block;
   position: relative;
   padding: 3rem 1.5rem;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .hero-inner-mobile { display: none; }
