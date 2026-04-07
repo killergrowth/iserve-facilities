@@ -150,21 +150,26 @@
 
         <!-- Contact Form -->
         <div class="animate-on-scroll" style="transition-delay:0.2s">
-          <!-- Success State -->
-          <div class="form-success" id="form-success">
-            <div class="form-success-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          <div class="contact-success-modal" id="contact-success-modal" aria-hidden="true">
+            <div class="contact-success-modal-backdrop" id="contact-success-backdrop"></div>
+            <div class="contact-success-modal-card">
+              <div class="form-success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3>Thank You!</h3>
+              <p>We’ll respond quickly to work with you on a customized proposal.</p>
             </div>
-            <h3>Thank You!</h3>
-            <p>We've received your request and will be in touch shortly with a customized quote for your facility.</p>
-            <button id="form-reset-btn" class="btn btn-primary btn-sm">Submit Another Request</button>
           </div>
 
           <!-- Form -->
-          <form id="contact-form" data-endpoint="https://formspree.io/f/YOUR_FORM_ID">
+          <form id="contact-form" novalidate data-endpoint="https://formspree.io/f/YOUR_FORM_ID">
             <div class="contact-form-group">
-              <label for="name">Name *</label>
+              <label for="name">Your Name *</label>
               <input type="text" id="name" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="contact-form-group">
+              <label for="business">Your Business *</label>
+              <input type="text" id="business" name="business" required placeholder="Business name" />
             </div>
             <div class="contact-form-group">
               <label for="phone">Phone *</label>
@@ -175,16 +180,16 @@
               <input type="email" id="email" name="email" required placeholder="you@company.com" />
             </div>
             <div class="contact-form-group">
-              <label for="city">City</label>
-              <input type="text" id="city" name="city" placeholder="e.g., Wichita" />
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" required placeholder="e.g., Wichita" />
             </div>
             <div class="contact-form-group">
-              <label for="service_needed">Service Needed</label>
-              <input type="text" id="service_needed" name="service_needed" placeholder="e.g., Daily Janitorial, Floor Care" />
+              <label for="service_needed">Service Needed *</label>
+              <input type="text" id="service_needed" name="service_needed" required placeholder="e.g., Daily Janitorial, Floor Care" />
             </div>
             <div class="contact-form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your facility and cleaning needs..."></textarea>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your facility and cleaning needs..."></textarea>
             </div>
             <button type="submit" id="form-submit-btn" class="btn btn-primary btn-full" style="font-size:1.125rem;padding:1rem">Request a Quote</button>
           </form>

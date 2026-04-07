@@ -1492,6 +1492,46 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   box-shadow: 0 0 0 3px rgba(64,104,223,0.1);
 }
 .contact-form-group textarea { resize: vertical; min-height: 7rem; }
+.contact-form-group input.error,
+.contact-form-group textarea.error,
+.contact-form-group select.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+.contact-success-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.contact-success-modal.show { display: flex; }
+.contact-success-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+}
+.contact-success-modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(32rem, calc(100% - 2rem));
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+.contact-success-modal-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 0.75rem;
+}
+.contact-success-modal-card p {
+  color: var(--gray-700);
+  margin: 0;
+}
 
 /* Form success */
 .form-success {

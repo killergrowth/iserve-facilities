@@ -210,14 +210,38 @@
   /* ─── Contact Form ───────────────────────────────────────── */
   function initContactForm() {
     var form = document.getElementById('contact-form');
-    var successBox = document.getElementById('form-success');
-    var resetBtn = document.getElementById('form-reset-btn');
     var submitBtn = document.getElementById('form-submit-btn');
+    var successModal = document.getElementById('contact-success-modal');
+    var successBackdrop = document.getElementById('contact-success-backdrop');
 
     if (!form) return;
 
+    function clearErrors() {
+      form.querySelectorAll('.error').forEach(function (field) {
+        field.classList.remove('error');
+      });
+    }
+
+    function validateForm() {
+      clearErrors();
+      var firstInvalid = null;
+      Array.from(form.querySelectorAll('input, textarea, select')).forEach(function (field) {
+        if (!field.checkValidity()) {
+          field.classList.add('error');
+          if (!firstInvalid) firstInvalid = field;
+        }
+      });
+      if (firstInvalid) firstInvalid.focus();
+      return !firstInvalid;
+    }
+
+    function closeSuccessModal() {
+      if (successModal) successModal.classList.remove('show');
+    }
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+      if (!validateForm()) return;
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -226,6 +250,7 @@
 
       var data = {
         name: form.name.value,
+        business: form.business ? form.business.value : '',
         phone: form.phone.value,
         email: form.email.value,
         city: form.city ? form.city.value : '',
@@ -234,8 +259,6 @@
       };
 
       try {
-        // Submit to Formspree (configure your endpoint URL here)
-        // Replace 'YOUR_FORM_ID' with your actual Formspree form ID
         var endpoint = form.getAttribute('data-endpoint') || 'https://formspree.io/f/YOUR_FORM_ID';
         var res = await fetch(endpoint, {
           method: 'POST',
@@ -244,16 +267,17 @@
         });
 
         if (res.ok) {
-          form.style.display = 'none';
-          if (successBox) successBox.classList.add('show');
+          form.reset();
+          clearErrors();
+          if (successModal) successModal.classList.add('show');
         } else {
           throw new Error('Server error');
         }
       } catch (err) {
-        // Fallback: mailto link
         var subject = encodeURIComponent('Quote Request from ' + data.name);
         var body = encodeURIComponent(
           'Name: ' + data.name + '\n' +
+          'Business: ' + data.business + '\n' +
           'Phone: ' + data.phone + '\n' +
           'Email: ' + data.email + '\n' +
           'City: ' + data.city + '\n' +
@@ -261,7 +285,7 @@
           data.message
         );
         window.location.href = 'mailto:service@iservefacilities.com?subject=' + subject + '&body=' + body;
-
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Request a Quote';
@@ -269,16 +293,17 @@
       }
     });
 
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        form.reset();
-        form.style.display = 'block';
-        if (successBox) successBox.classList.remove('show');
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Request a Quote';
-        }
+    form.querySelectorAll('input, textarea, select').forEach(function (field) {
+      field.addEventListener('input', function () {
+        if (field.checkValidity()) field.classList.remove('error');
       });
+    });
+
+    if (successModal) {
+      successModal.addEventListener('click', closeSuccessModal);
+    }
+    if (successBackdrop) {
+      successBackdrop.addEventListener('click', closeSuccessModal);
     }
   }
 
