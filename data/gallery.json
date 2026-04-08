@@ -22,25 +22,13 @@
       "id": "daily-building-1",
       "src": "images/IMG_1174.jpg",
       "caption": "Routine building care",
-      "tags": ["daily-building", "janitorial", "schools"]
-    },
-    {
-      "id": "schools-1",
-      "src": "images/IMG_2472.jpg",
-      "caption": "School facility cleaning",
-      "tags": ["schools"]
+      "tags": ["daily-building", "janitorial"]
     },
     {
       "id": "floor-care-1",
       "src": "images/IMG_1824.jpg",
       "caption": "Hard surface floor care",
       "tags": ["floor-care"]
-    },
-    {
-      "id": "carpet-1",
-      "src": "images/IMG_0208.jpg",
-      "caption": "Carpet cleaning example",
-      "tags": ["carpet"]
     },
     {
       "id": "warehouse-1",
