@@ -21,8 +21,8 @@
     {
       "id": "daily-building-1",
       "src": "images/IMG_1174.jpg",
-      "caption": "Routine building care",
-      "tags": ["daily-building", "janitorial"]
+      "caption": "Restroom cleaning",
+      "tags": ["daily-building", "janitorial", "schools"]
     },
     {
       "id": "daily-building-2",
@@ -43,22 +43,10 @@
       "tags": ["schools"]
     },
     {
-      "id": "schools-2",
-      "src": "images/gallery-school-restroom.jpg",
-      "caption": "School restroom cleaning",
-      "tags": ["schools", "janitorial"]
-    },
-    {
-      "id": "schools-3",
-      "src": "images/gallery-school-gym.jpg",
-      "caption": "School gymnasium floor care",
-      "tags": ["schools", "floor-care"]
-    },
-    {
       "id": "floor-care-1",
       "src": "images/IMG_1824.jpg",
-      "caption": "Hard surface floor care",
-      "tags": ["floor-care"]
+      "caption": "School gymnasium floor care",
+      "tags": ["floor-care", "schools"]
     },
     {
       "id": "floor-care-2",
