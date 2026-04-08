@@ -19,22 +19,39 @@
     var serviceLabels = {};
     data.services.forEach(function (s) { serviceLabels[s.id] = s.label; });
 
-    // Build nav: All + each service
+    // Build nav: All + each service — two rows, row 1 wider (6 items), row 2 narrower (5 items)
     function buildNav() {
       nav.innerHTML = '';
+      var buttons = [];
+
       var allBtn = document.createElement('a');
       allBtn.href = '#';
       allBtn.textContent = 'All Photos';
       allBtn.className = 'active';
       allBtn.dataset.filter = 'all';
-      nav.appendChild(allBtn);
+      buttons.push(allBtn);
+
       data.services.forEach(function (service) {
         var btn = document.createElement('a');
         btn.href = '#';
         btn.textContent = service.label;
         btn.dataset.filter = service.id;
-        nav.appendChild(btn);
+        buttons.push(btn);
       });
+
+      var splitAt = Math.ceil(buttons.length / 2);
+      var row1 = document.createElement('div');
+      row1.className = 'gallery-tag-row';
+      var row2 = document.createElement('div');
+      row2.className = 'gallery-tag-row';
+
+      buttons.forEach(function (btn, i) {
+        if (i < splitAt) { row1.appendChild(btn); }
+        else { row2.appendChild(btn); }
+      });
+
+      nav.appendChild(row1);
+      nav.appendChild(row2);
     }
 
     function renderPhotos(filter) {

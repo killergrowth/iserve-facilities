@@ -108,11 +108,16 @@
   <style>
     .gallery-tag-nav {
       display:flex;
-      flex-wrap:wrap;
+      flex-direction:column;
+      align-items:center;
       gap:0.35rem;
-      justify-content:center;
-      max-width:680px;
       margin:0 auto;
+    }
+    .gallery-tag-row {
+      display:flex;
+      flex-wrap:nowrap;
+      justify-content:center;
+      gap:0.35rem;
     }
     .gallery-tag-nav a {
       padding:0.25rem 0.65rem;
