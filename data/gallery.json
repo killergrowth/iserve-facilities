@@ -61,15 +61,45 @@
       "tags": ["floor-care"]
     },
     {
+      "id": "floor-care-4",
+      "src": "images/gallery-floor-church.jpg",
+      "caption": "VCT floor strip and wax",
+      "tags": ["floor-care"]
+    },
+    {
+      "id": "floor-care-5",
+      "src": "images/gallery-floor-gym2.jpg",
+      "caption": "Gymnasium floor refinishing",
+      "tags": ["floor-care"]
+    },
+    {
+      "id": "floor-care-6",
+      "src": "images/gallery-floor-lab.jpg",
+      "caption": "Laboratory floor waxing",
+      "tags": ["floor-care"]
+    },
+    {
       "id": "warehouse-1",
       "src": "images/IMG_0714.jpg",
       "caption": "Warehouse cleaning",
       "tags": ["warehouse"]
     },
     {
+      "id": "warehouse-2",
+      "src": "images/gallery-warehouse-floor.jpg",
+      "caption": "Warehouse floor scrubbing",
+      "tags": ["warehouse", "floor-care"]
+    },
+    {
       "id": "maintenance-1",
       "src": "images/IMG_2178.jpg",
-      "caption": "Facility maintenance work",
+      "caption": "Classroom cleaning",
+      "tags": ["maintenance", "schools"]
+    },
+    {
+      "id": "maintenance-2",
+      "src": "images/gallery-maintenance-light.jpg",
+      "caption": "Light fixture replacement",
       "tags": ["maintenance"]
     },
     {
