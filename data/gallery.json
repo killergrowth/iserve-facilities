@@ -25,9 +25,51 @@
       "tags": ["daily-building", "janitorial"]
     },
     {
+      "id": "daily-building-2",
+      "src": "images/gallery-office-open.jpg",
+      "caption": "Open-plan office cleaning",
+      "tags": ["daily-building", "janitorial"]
+    },
+    {
+      "id": "daily-building-3",
+      "src": "images/gallery-breakroom.jpg",
+      "caption": "Break room & kitchenette care",
+      "tags": ["daily-building", "janitorial"]
+    },
+    {
+      "id": "schools-1",
+      "src": "images/gallery-school-classroom.jpg",
+      "caption": "School classroom cleaning",
+      "tags": ["schools"]
+    },
+    {
+      "id": "schools-2",
+      "src": "images/gallery-school-restroom.jpg",
+      "caption": "School restroom cleaning",
+      "tags": ["schools", "janitorial"]
+    },
+    {
+      "id": "schools-3",
+      "src": "images/gallery-school-gym.jpg",
+      "caption": "School gymnasium floor care",
+      "tags": ["schools", "floor-care"]
+    },
+    {
       "id": "floor-care-1",
       "src": "images/IMG_1824.jpg",
       "caption": "Hard surface floor care",
+      "tags": ["floor-care"]
+    },
+    {
+      "id": "floor-care-2",
+      "src": "images/gallery-floor-hex.jpg",
+      "caption": "Decorative floor maintenance",
+      "tags": ["floor-care"]
+    },
+    {
+      "id": "floor-care-3",
+      "src": "images/gallery-floor-slate.jpg",
+      "caption": "Slate tile entryway care",
       "tags": ["floor-care"]
     },
     {
@@ -58,6 +100,12 @@
       "id": "project-work-1",
       "src": "images/project-work.png",
       "caption": "Project work example",
+      "tags": ["project-work"]
+    },
+    {
+      "id": "project-work-2",
+      "src": "images/gallery-project-construction.jpg",
+      "caption": "Post-construction cleanup",
       "tags": ["project-work"]
     }
   ]
