@@ -1,0 +1,76 @@
+{
+  "services": [
+    { "id": "janitorial", "label": "Janitorial Services" },
+    { "id": "daily-building", "label": "Daily Building Cleaning" },
+    { "id": "schools", "label": "School Cleaning" },
+    { "id": "floor-care", "label": "Hard Surface Floor Care" },
+    { "id": "carpet", "label": "Carpet Cleaning" },
+    { "id": "warehouse", "label": "Warehouse Cleaning" },
+    { "id": "maintenance", "label": "Facility Maintenance" },
+    { "id": "day-porter", "label": "Day Porter" },
+    { "id": "event", "label": "Event Setup & Breakdown" },
+    { "id": "project-work", "label": "Project Work" }
+  ],
+  "photos": [
+    {
+      "id": "janitorial-1",
+      "src": "images/DEE9F871-A895-47E8-BFD5-58B99B46E929_1_105_c.jpeg",
+      "caption": "General janitorial service",
+      "tags": ["janitorial", "daily-building"]
+    },
+    {
+      "id": "daily-building-1",
+      "src": "images/IMG_1174.jpg",
+      "caption": "Routine building care",
+      "tags": ["daily-building", "janitorial", "schools"]
+    },
+    {
+      "id": "schools-1",
+      "src": "images/IMG_2472.jpg",
+      "caption": "School facility cleaning",
+      "tags": ["schools"]
+    },
+    {
+      "id": "floor-care-1",
+      "src": "images/IMG_1824.jpg",
+      "caption": "Hard surface floor care",
+      "tags": ["floor-care"]
+    },
+    {
+      "id": "carpet-1",
+      "src": "images/IMG_0208.jpg",
+      "caption": "Carpet cleaning example",
+      "tags": ["carpet"]
+    },
+    {
+      "id": "warehouse-1",
+      "src": "images/IMG_0714.jpg",
+      "caption": "Warehouse cleaning",
+      "tags": ["warehouse"]
+    },
+    {
+      "id": "maintenance-1",
+      "src": "images/IMG_2178.jpg",
+      "caption": "Facility maintenance work",
+      "tags": ["maintenance"]
+    },
+    {
+      "id": "day-porter-1",
+      "src": "images/IMG_1796.jpg",
+      "caption": "Day porter support",
+      "tags": ["day-porter"]
+    },
+    {
+      "id": "event-1",
+      "src": "images/event-setup-breakdown.png",
+      "caption": "Event setup & breakdown",
+      "tags": ["event"]
+    },
+    {
+      "id": "project-work-1",
+      "src": "images/project-work.png",
+      "caption": "Project work example",
+      "tags": ["project-work"]
+    }
+  ]
+}

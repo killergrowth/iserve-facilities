@@ -88,19 +88,77 @@
   <section class="services-page-hero">
     <div class="container text-center">
       <h1>Gallery</h1>
-      <p>Browse project photos by service tag. Click a service to jump straight to the matching images.</p>
+      <p>Browse our work. Use the filters to search by service type.</p>
     </div>
   </section>
 
-  <section style="padding:2rem 0 1rem;background:var(--white)">
+  <section style="padding:2rem 0 1rem;background:var(--white);border-bottom:1px solid var(--gray-200)">
     <div class="container">
       <div class="gallery-tag-nav" id="gallery-tag-nav"></div>
     </div>
   </section>
 
-  <section class="gallery-page-section">
-    <div class="container" id="gallery-sections"></div>
+  <section style="padding:2.5rem 0 4rem;background:var(--gray-50)">
+    <div class="container">
+      <div class="gallery-unified-grid" id="gallery-unified-grid"></div>
+      <p class="gallery-empty-note" id="gallery-empty-note" style="display:none;text-align:center;padding:4rem 0;color:var(--gray-400)">No photos found for this filter.</p>
+    </div>
   </section>
+
+  <style>
+    .gallery-tag-nav { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .gallery-tag-nav a {
+      padding:0.4rem 1rem;
+      border-radius:9999px;
+      border:2px solid var(--gray-300);
+      background:var(--white);
+      color:var(--gray-600);
+      font-size:0.875rem;
+      font-weight:500;
+      cursor:pointer;
+      text-decoration:none;
+      transition:all 0.15s;
+    }
+    .gallery-tag-nav a:hover { border-color:var(--primary); color:var(--primary); }
+    .gallery-tag-nav a.active { background:var(--primary); border-color:var(--primary); color:var(--white); }
+    .gallery-unified-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+      gap:1.25rem;
+    }
+    .gallery-unified-item {
+      position:relative;
+      border-radius:0.75rem;
+      overflow:hidden;
+      box-shadow:var(--shadow-md);
+      background:var(--white);
+      border:1px solid var(--gray-200);
+      cursor:pointer;
+    }
+    .gallery-unified-item img {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      transition:transform 0.3s ease;
+    }
+    .gallery-unified-item:hover img { transform:scale(1.08); }
+    .gallery-corner-tag {
+      position:absolute;
+      top:0.6rem;
+      left:0.6rem;
+      background:rgba(30,58,138,0.85);
+      color:#fff;
+      font-size:0.68rem;
+      font-weight:700;
+      padding:0.2rem 0.55rem;
+      border-radius:9999px;
+      pointer-events:none;
+      transition:opacity 0.2s;
+      backdrop-filter:blur(4px);
+    }
+    .gallery-unified-item:hover .gallery-corner-tag { opacity:0; }
+  </style>
 </main>
 
 </div>
