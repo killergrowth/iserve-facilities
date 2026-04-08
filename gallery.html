@@ -106,7 +106,14 @@
   </section>
 
   <style>
-    .gallery-tag-nav { display:flex; flex-wrap:wrap; gap:0.35rem; }
+    .gallery-tag-nav {
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.35rem;
+      justify-content:center;
+      max-width:680px;
+      margin:0 auto;
+    }
     .gallery-tag-nav a {
       padding:0.25rem 0.65rem;
       border-radius:9999px;
@@ -119,6 +126,7 @@
       text-decoration:none;
       transition:all 0.15s;
       line-height:1.4;
+      white-space:nowrap;
     }
     .gallery-tag-nav a:hover { border-color:var(--primary); color:var(--primary); }
     .gallery-tag-nav a.active { background:var(--primary); border-color:var(--primary); color:var(--white); }
