@@ -609,7 +609,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: relative;
   overflow: hidden;
   background: var(--white);
-  color: var(--navy);
+  color: var(--white);
   border: 2px solid var(--gray-300);
   z-index: 0;
 }
@@ -831,16 +831,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border: 2px solid rgba(255,255,255,0.45);
 }
 .trust-medal-gold .trust-medal-circle {
-  background: radial-gradient(circle at 30% 30%, #fde68a 0%, #facc15 42%, #ca8a04 100%);
+  background: linear-gradient(135deg, #fde68a 0%, #facc15 50%, #ca8a04 100%);
 }
 .trust-medal-silver .trust-medal-circle {
-  background: radial-gradient(circle at 30% 30%, #f8fafc 0%, #d1d5db 42%, #6b7280 100%);
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 50%, #6b7280 100%);
 }
 .trust-medal-bronze .trust-medal-circle {
-  background: radial-gradient(circle at 30% 30%, #f5d0a9 0%, #c08457 42%, #7c2d12 100%);
+  background: linear-gradient(135deg, #e8c49a 0%, #c08457 50%, #7c2d12 100%);
 }
 .trust-medal-blue .trust-medal-circle {
-  background: radial-gradient(circle at 30% 30%, #bfdbfe 0%, #60a5fa 42%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 50%, #1d4ed8 100%);
 }
 .trust-medal-value {
   position: relative;
