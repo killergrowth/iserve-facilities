@@ -419,6 +419,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .site-nav a:hover,
 .site-nav a.active { color: var(--primary); }
+.site-nav a.btn-primary,
+.site-nav a.btn-primary:hover { color: var(--white); }
 .site-nav button.nav-link {
   font-size: 0.875rem;
   font-weight: 500;
