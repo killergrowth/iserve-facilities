@@ -315,13 +315,63 @@
   function initApplyForm() {
     var form = document.getElementById('apply-form');
     var successBox = document.getElementById('apply-success');
+    var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
     if (!form || !successBox) return;
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
-      form.style.display = 'none';
-      successBox.style.display = 'block';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
+
+      try {
+        var data = {
+          name: form.name ? form.name.value : '',
+          phone: form.phone ? form.phone.value : '',
+          email: form.email ? form.email.value : '',
+          about: form.about ? form.about.value : '',
+        };
+
+        // Read resume file as base64
+        var fileInput = form.querySelector('input[type="file"]');
+        if (fileInput && fileInput.files && fileInput.files[0]) {
+          var file = fileInput.files[0];
+          data.resumeFilename = file.name;
+          data.resumeMimeType = file.type || 'application/octet-stream';
+          data.resumeBase64 = await new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function () {
+              // strip the data:...;base64, prefix
+              var result = reader.result;
+              resolve(result.split(',')[1]);
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+        }
+
+        var res = await fetch('https://iserve-apply-form.notifications-27c.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        } else {
+          throw new Error('Server error ' + res.status);
+        }
+      } catch (err) {
+        alert('Something went wrong submitting your application. Please try again or email us directly at service@iservefacilities.com.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Application';
+        }
+      }
     });
   }
 
