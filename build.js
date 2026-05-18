@@ -42,7 +42,7 @@ function processHTML(content, header, footer) {
 fs.mkdirSync(DIST, { recursive: true });
 
 // ── Copy static assets ────────────────────────────────────────────────────────
-for (const dir of ['css', 'js', 'images']) {
+for (const dir of ['css', 'js', 'images', 'data']) {
   copyDir(path.join(ROOT, dir), path.join(DIST, dir));
   console.log(`Copied: ${dir}/`);
 }
